@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+</head>
+
+
+<body>
+
+
+<h2>STUDENT TODO LIST </h2>
+<hr>
+
+
+   <input type="text" id="new_list_item">
+   <button onclick="addItem()">Add Item</button>
+<!--1.create the list-->
+
+<!--2. give 4default value-->
+<script type="text/javascript">
+var listItems = ['Get Up On Time','Study Well','Get High Marks','Make Parents Proud'];
+</script>
+
+<script type="text/javascript">
+function addItem(){
+var tempItem = document.getElementById("new_list_item").value;
+listItems.push(tempItem);
+displayList(tempItem);
+document.getElementById("new_list_item").value='';
+
+}
+</script>
+
+<!---3. display the list--->
+
+<div id="display">
+<h3>Your TODO : </h3>
+<ul>
+<script type="text/javascript">
+listItems.forEach(displayList);
+
+function displayList(item){
+document.getElementById("display").innerHTML+="<li>"+item+"</li>"
+}
+</script>
+</ul>
+</div>
+
+
+<!---4.add item to list--->
+
+</body>
+</html>
